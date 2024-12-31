@@ -1,2 +1,2 @@
 # react-simple-dashboard
-A simple dashboard made with React
+A simple analytics dashboard made with React
