@@ -1,6 +1,5 @@
 import { ScatterChart } from "@mui/x-charts";
 
-
 const data = [
     {
       id: 'data-0',
