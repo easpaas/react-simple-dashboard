@@ -1,7 +1,6 @@
 import { Paper } from "@mui/material";
 import Card from "../components/Card";
 
-
 const data = {
     sessionDuration: {
         value: 100 
