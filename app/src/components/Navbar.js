@@ -2,7 +2,6 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Link from '@mui/material/Link';
-
 import { styled, useTheme } from '@mui/material/styles';
 import Drawer from '@mui/material/Drawer';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -11,15 +10,18 @@ import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
+import SettingsIcon from '@mui/icons-material/Settings';
+import PieChartIcon from '@mui/icons-material/PieChart';
+import ScatterPlotIcon from '@mui/icons-material/ScatterPlot';
+import BarChartIcon from '@mui/icons-material/BarChart';
 import MenuIcon from '@mui/icons-material/Menu';
+import AnalyticsIcon from '@mui/icons-material/Analytics';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 
 const drawerWidth = 240;
 
@@ -92,7 +94,7 @@ export default function NavBar({title}) {
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1, marginBottom: '80px' }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
         <Toolbar>
@@ -133,29 +135,54 @@ export default function NavBar({title}) {
         </DrawerHeader>
         <Divider />
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <AnalyticsIcon />
+              </ListItemIcon>
+              <ListItemText primary='Key Metrics' />
+              {/* TODO: replace ListItemText with a Link */}
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <PieChartIcon />
+              </ListItemIcon>
+              <ListItemText primary='Pie Charts' />
+              {/* TODO: replace ListItemText with a Link */}
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <BarChartIcon />
+              </ListItemIcon>
+              <ListItemText primary='Bar Graphs' />
+              {/* TODO: replace ListItemText with a Link */}
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <ScatterPlotIcon />
+              </ListItemIcon>
+              <ListItemText primary='Scatter Plots' />
+              {/* TODO: replace ListItemText with a Link */}
+            </ListItemButton>
+          </ListItem>
         </List>
         <Divider />
         <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem key={text} disablePadding>
+            <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  <SettingsIcon />
                 </ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemText primary={"Settings"} />
+                {/* TODO: replace ListItemText with a Link */}
               </ListItemButton>
             </ListItem>
-          ))}
         </List>
       </Drawer>
     </Box>
