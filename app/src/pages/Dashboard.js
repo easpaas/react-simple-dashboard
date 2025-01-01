@@ -174,15 +174,13 @@ const data = [
   ];
 
 
-function Dashboard() {
+function Dashboard({title}) {
     return (
         <div>
-            <NavBar />
-            <h1>Dashboard</h1>
+            <NavBar title={title ?? 'Label'}/>
+            {/* TODO: turn each chart below into its own page  */}
             {/* cards for key metrics */}
-            <Card title="Metric 1" value="lorem ipsum" />
-            <Card title="Metric 2" value="lorem ipsum" />
-            <Card title="Metric 3" value="lorem ipsum" />
+          
             {/* tables for detailed data */}
             <Table />
             {/* charts for visualizations */}

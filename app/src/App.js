@@ -6,7 +6,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Dashboard />} />
+        <Route path="/" element={<Dashboard title='Dashboard' />} />
         <Route path="/settings" element={<Settings />} />
       </Routes>
     </BrowserRouter>
