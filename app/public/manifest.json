@@ -1,6 +1,6 @@
 {
-  "short_name": "Analytics Dashboard",
-  "name": "Analytics Dashboard",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
       "src": "favicon.ico",
